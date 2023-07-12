@@ -14,7 +14,6 @@ public class RequisicaoNovoPedido {
 	@NotBlank
 	private String urlImagem;
 	
-	@NotBlank
 	private String descricao;
 	
 	public String getNomeProduto() {
