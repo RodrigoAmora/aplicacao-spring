@@ -1,6 +1,7 @@
 package br.com.rodrigoamora.dto;
 
 import br.com.rodrigoamora.model.Pedido;
+import br.com.rodrigoamora.model.StatusPedido;
 import jakarta.validation.constraints.NotBlank;
 
 public class RequisicaoNovoPedido {
@@ -54,6 +55,7 @@ public class RequisicaoNovoPedido {
 		pedido.setNomeDoProduto(nomeProduto);
 		pedido.setUrlImage(urlImagem);
 		pedido.setUrlProduto(urlProduto);
+		pedido.setStatus(StatusPedido.AGUARDANDO);
 		return pedido;
 	}
 }
