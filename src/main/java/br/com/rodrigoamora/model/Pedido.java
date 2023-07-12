@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 public class Pedido {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	private String nomeDoProduto;
