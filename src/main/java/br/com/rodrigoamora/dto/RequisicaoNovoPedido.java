@@ -1,12 +1,20 @@
 package br.com.rodrigoamora.dto;
 
 import br.com.rodrigoamora.model.Pedido;
+import jakarta.validation.constraints.NotBlank;
 
 public class RequisicaoNovoPedido {
 
+	@NotBlank
 	private String nomeProduto;
+	
+	@NotBlank
 	private String urlProduto;
-	private String urlImage;
+	
+	@NotBlank
+	private String urlImagem;
+	
+	@NotBlank
 	private String descricao;
 	
 	public String getNomeProduto() {
@@ -25,12 +33,12 @@ public class RequisicaoNovoPedido {
 		this.urlProduto = urlProduto;
 	}
 	
-	public String getUrlImage() {
-		return urlImage;
+	public String getUrlImagem() {
+		return urlImagem;
 	}
 	
-	public void setUrlImage(String urlImage) {
-		this.urlImage = urlImage;
+	public void setUrlImagem(String urlImagem) {
+		this.urlImagem = urlImagem;
 	}
 	
 	public String getDescricao() {
@@ -45,7 +53,7 @@ public class RequisicaoNovoPedido {
 		Pedido pedido = new Pedido();
 		pedido.setDescricao(descricao);
 		pedido.setNomeDoProduto(nomeProduto);
-		pedido.setUrlImage(urlImage);
+		pedido.setUrlImage(urlImagem);
 		pedido.setUrlProduto(urlProduto);
 		return pedido;
 	}
